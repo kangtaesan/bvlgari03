@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Agatho BoldCAPS';
+    src: url('font/AgathoBoldCAPS.eot');
+    src: url('font/AgathoBoldCAPS.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoBoldCAPS.woff2') format('woff2'),
+        url('font/AgathoBoldCAPS.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho';
+    src: url('font/AgathoLight.eot');
+    src: url('font/AgathoLight.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoLight.woff2') format('woff2'),
+        url('font/AgathoLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho';
+    src: url('font/AgathoBold.eot');
+    src: url('font/AgathoBold.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoBold.woff2') format('woff2'),
+        url('font/AgathoBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho';
+    src: url('font/AgathoMedium.eot');
+    src: url('font/AgathoMedium.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoMedium.woff2') format('woff2'),
+        url('font/AgathoMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho LightCAPS';
+    src: url('font/AgathoLightCAPS.eot');
+    src: url('font/AgathoLightCAPS.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoLightCAPS.woff2') format('woff2'),
+        url('font/AgathoLightCAPS.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho';
+    src: url('font/AgathoRegular.eot');
+    src: url('font/AgathoRegular.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoRegular.woff2') format('woff2'),
+        url('font/AgathoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho RegularCAPS';
+    src: url('font/AgathoRegularCAPS.eot');
+    src: url('font/AgathoRegularCAPS.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoRegularCAPS.woff2') format('woff2'),
+        url('font/AgathoRegularCAPS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Agatho Narrow';
+    src: url('font/AgathoNarrow.eot');
+    src: url('font/AgathoNarrow.eot?#iefix') format('embedded-opentype'),
+        url('font/AgathoNarrow.woff2') format('woff2'),
+        url('font/AgathoNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-SemiBold.eot');
+    src: url('font/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-SemiBold.woff2') format('woff2'),
+        url('font/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Medium.eot');
+    src: url('font/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Medium.woff2') format('woff2'),
+        url('font/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Thin.eot');
+    src: url('font/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Thin.woff2') format('woff2'),
+        url('font/Pretendard-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Regular.eot');
+    src: url('font/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Regular.woff2') format('woff2'),
+        url('font/Pretendard-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-ExtraBold.eot');
+    src: url('font/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('font/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Black.eot');
+    src: url('font/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Black.woff2') format('woff2'),
+        url('font/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Bold.eot');
+    src: url('font/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Bold.woff2') format('woff2'),
+        url('font/Pretendard-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-ExtraLight.eot');
+    src: url('font/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('font/Pretendard-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('font/Pretendard-Light.eot');
+    src: url('font/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/Pretendard-Light.woff2') format('woff2'),
+        url('font/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'THEFACESHOPA1';
+    src: url('font/THEFACESHOPA1.eot');
+    src: url('font/THEFACESHOPA1.eot?#iefix') format('embedded-opentype'),
+        url('font/THEFACESHOPA1.woff2') format('woff2'),
+        url('font/THEFACESHOPA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
