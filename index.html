@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bvlgari</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <link href="css/main.css" rel="stylesheet" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        window.onload = function () {
+
+
+            //mobile_menu
+            let menu01 = document.getElementsByClassName('moblie_menu')[0];
+            let menuImg01 = menu01.getElementsByTagName('img')[0];
+            let mobileMenu01 = document.getElementsByClassName('menu')[0];
+            let menuList01 = mobileMenu01.getElementsByClassName('mobile')[0];
+
+            menuList01.style.display = 'none';
+
+            menuImg01.onclick = function () {
+                if (menuList01.style.display == 'none') {
+                    menuList01.style.display = 'block';
+                } else { menuList01.style.display = 'none'; }
+            }
+
+            let menu02 = document.getElementsByClassName('mobile')[0];
+            let menuImg02 = menu02.getElementsByTagName('img')[1];
+            let menuList02 = document.getElementsByClassName('mobile')[0];
+
+            menuImg02.onclick = function () {
+                if (menuList02.style.display == 'block') {
+                    menuList02.style.display = 'none';
+                } else { menuList02.style.display = 'block'; }
+            }
+
+            let depth01 = menu02.getElementsByClassName('depth01');
+            let depth02 = menu02.getElementsByClassName('depth02');
+
+
+            for (let i = 0; i < depth02.length; i++) {
+                depth02[i].style.display = 'none';
+            }
+
+            for (let i = 0; i < depth01.length; i++) {
+                let depth02Children = depth01[i].children[1];
+                let depth02Children0 = depth01[i].children[0];
+                console.log(depth01[i].children[0])
+                depth01[i].onclick = function () {
+                    if (depth02Children.style.display == 'none') {
+                        depth02Children.style.display = 'block'
+
+                        depth02Children0.classList.add('on');
+
+                    } else {
+                        depth02Children.style.display = 'none'
+
+                        depth02Children0.classList.remove('on');
+                    }
+                }
+
+            }
+
+            /* let depth01Text = depth01.getElementsByClassName('depth01_text'); */
+
+            /* for(let i = 0; i < depth01Text.length; i++) {
+                depth01Text[i].onclick = function () {
+                    depth01Text.forEach(function(item){
+                        item.classList.remove('on');
+                    })
+                    depth01Text[i].classList.add('on');
+                }
+            } */
+
+            //mobile_menu
+
+            //cont03
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 10,
+                slidesPerView: 1,
+                freeMode: false,
+                watchSlidesProgress: true,
+                scrollbar: {
+                    el: ".swiper-scrollbar",
+                    hide: false,
+                },
+            });
+            var swiper2 = new Swiper(".mySwiper2", {
+                spaceBetween: 10,
+                slidesPerView: 3,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                    scrollbar: {
+                        el: ".swiper-scrollbar",
+                        hide: false,
+                    },
+                },
+                thumbs: {
+                    swiper: swiper,
+                },
+            }); //cont03
+
+
+            //cont05
+            let img01 = 'url(img/service01.png)';
+            let img02 = 'url(img/service02.png)';
+            let img03 = 'url(img/service03.png)';
+
+            let imgList = [img01, img02, img03];
+            let numList = [1, 2, 3];
+
+            let cont05 = document.getElementsByClassName('cont05')[0];
+            let list = cont05.getElementsByClassName('list')[0];
+            let item = list.getElementsByClassName('item');
+
+            for (let i = 0; i < item.length; i++) {
+
+                item[i].onmouseenter = function () {
+                    list.style.backgroundImage = imgList[i];
+
+                }
+            } //cont05
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="top_banner">
+            <p>새롭게 선보이는 아이코닉한 주얼리 컬렉션과 한국 리미티드 에디션 제품을 만나 보세요.</p>
+        </div> <!-- .top_banner -->
+        <section class="middle">
+            <div class="left_gnb">
+                <ul>
+                    <li><a href="#">STORE</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                </ul>
+                <form action="" method="post" autocomplete="on">
+                    <fieldset>
+                        <input type="text" placeholder="search" />
+                    </fieldset>
+                </form>
+            </div> <!-- .left_gnb -->
+            <div class="top_logo">
+                <h1>
+                    <a href="#"><img src="img/bvlgari.png" alt="logo" /></a>
+                </h1>
+            </div> <!-- .top_logo end -->
+            <div class="right_gnb">
+                <ul>
+                    <li><a href="#">LOGIN</a></li>
+                    <li><a href="#">WISHLIST(<span>0</span>)</a></li>
+                    <li><a href="#">CART(<span>0</span>)</a></li>
+                </ul>
+            </div> <!-- .right_gnb -->
+            <div class="moblie_menu">
+                <figure>
+                    <img src="img/menu.png" alt="메뉴아이콘" />
+                </figure>
+
+            </div>
+        </section> <!-- .middle end -->
+        <section class="menu">
+            <div class="pc">
+                <nav>
+                    <ul>
+                        <li class="depth01">
+                            <a href="#">브랜드</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <div>
+                                        <h3>BRAND</h3>
+                                        <div class="text">
+                                            <li><a href="#">불가리의 역사</a></li>
+                                            <li><a href="#">불가리의 아이덴티티</a></li>
+                                            <li><a href="#">불가리의 혁신</a></li>
+                                            <li><a href="#">사회 공헌 활동</a></li>
+                                            <li><a href="#">작품 & 전시회</a></li>
+                                            <li><a href="#">인재채용</a></li>
+                                        </div> <!-- .text end -->
+                                    </div>
+                                    <div class="list">
+                                        <figure>
+                                            <a href="#"><img src="img/menu01.png" alt="메뉴1" /></a>
+                                        </figure>
+                                        <figure>
+                                            <a href="#"><img src="img/menu02.png" alt="메뉴2" /></a>
+                                        </figure>
+                                    </div>
+                                </div> <!-- .inner end -->
+                            </ul> <!-- depth02 end -->
+                        </li> <!-- depth01 end -->
+                        <li class="depth01">
+                            <a href="#">주얼리</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>JEWELLERY</h3>
+                                    <div class="jew_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <li><a href="#">링</a></li>
+                                            <li><a href="#">네크리스</a></li>
+                                            <li><a href="#">브레이슬릿</a></li>
+                                            <li><a href="#">이어링</a></li>
+                                            <li><a href="#">기타</a></li>
+                                            <li><a href="#">전체보기</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="list">
+                                                <div class="top">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu03.png" alt="메뉴3" /></a>
+                                                        </figure>
+                                                        <p><a href="#">세르펜티</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu04.png" alt="메뉴4" /></a>
+                                                        </figure>
+                                                        <p><a href="#">비제로원</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .top end -->
+                                                <div class="bottom">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu05.png" alt="메뉴5" /></a>
+                                                        </figure>
+                                                        <p><a href="#">디바스 드림</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu06.png" alt="메뉴6" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 불가리</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .bottom end -->
+                                            </div> <!-- .list end -->
+                                        </div> <!-- .collet -->
+                                        <div class="select">
+                                            <h4>Bvlgari Selection</h4>
+                                            <li><a href="#">신제품</a></li>
+                                            <li><a href="#">베스트셀러</a></li>
+                                            <li><a href="#">퍼스널 라이즈</a></li>
+                                            <li><a href="#">남성용 컬렉션</a></li>
+                                            <li><a href="#">다이아몬드 주얼리</a></li>
+                                            <li><a href="#">커플링</a></li>
+                                        </div> <!-- .select end -->
+                                    </div>
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">인게이지먼트 & 웨딩</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>ENGAGEMENT&WEDDING</h3>
+                                    <div class="wed_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <li><a href="#">인게이지먼트 링</a></li>
+                                            <li><a href="#">여성용 웨딩밴드</a></li>
+                                            <li><a href="#">남성용 웨딩밴드</a></li>
+                                            <li><a href="#">커플링</a></li>
+                                            <li><a href="#">전체보기</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="list">
+                                                <div class="top">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu11.png" alt="메뉴11" /></a>
+                                                        </figure>
+                                                        <p><a href="#">로마 아모르</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu12.png" alt="메뉴12" /></a>
+                                                        </figure>
+                                                        <p><a href="#">인콘트로 다모레</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .top end -->
+                                                <div class="bottom">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu13.png" alt="메뉴13" /></a>
+                                                        </figure>
+                                                        <p><a href="#">인피니토</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu14.png" alt="메뉴14" /></a>
+                                                        </figure>
+                                                        <p><a href="#">베네치아</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .bottom end -->
+                                            </div> <!-- .list end -->
+                                        </div> <!-- .collet -->
+                                        <div class="select">
+                                            <h4>Bvlgari Diamond</h4>
+                                            <li><a href="#">다이아몬드 캐럿</a></li>
+                                            <li><a href="#">다이아몬드 투명도</a></li>
+                                            <li><a href="#">다이아몬드 컬러</a></li>
+                                            <li><a href="#">다이아몬드 컷</a></li>
+                                            <li><a href="#">GIA 감정서</a></li>
+                                            <li><a href="#">킴벌리 프로세스 인증</a></li>
+                                        </div> <!-- .select end -->
+                                    </div>
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">워치</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>WATCH</h3>
+                                    <div class="wat_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <div class="woman">
+                                                <h4>woman</h4>
+                                                <li><a href="#">다이아몬드 워치</a></li>
+                                                <li><a href="#">골드 워치</a></li>
+                                                <li><a href="#">레더 스트랩 워치</a></li>
+                                            </div> <!-- .woman end -->
+                                            <div class="man">
+                                                <h4>man</h4>
+                                                <li><a href="#">오토매틱 워치</a></li>
+                                                <li><a href="#">크로노그래프 워치</a></li>
+                                                <li><a href="#">스켈레톤 워치</a></li>
+                                                <li><a href="#">레더 스트랩 워치</a></li>
+                                            </div> <!-- .man end -->
+                                            <li><a href="#">전체보기</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="wat_collet">
+                                                <div class="woman">
+                                                    <h4>woman</h4>
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu07.png" alt="메뉴7" /></a>
+                                                        </figure>
+                                                        <p><a href="#">세르펜티</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu08.png" alt="메뉴8" /></a>
+                                                        </figure>
+                                                        <p><a href="#">루체아</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .woman end -->
+                                                <div class="man">
+                                                    <h4>man</h4>
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu08.png" alt="메뉴8" /></a>
+                                                        </figure>
+                                                        <p><a href="#">옥토</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu09.png" alt="메뉴9" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 불가리</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .man end -->
+                                            </div>
+                                        </div> <!-- .collet end -->
+                                        <div class="select">
+                                            <h4>Bvlgari Selection</h4>
+                                            <li><a href="#">신제품</a></li>
+                                            <li><a href="#">월드 레코드</a></li>
+                                            <li><a href="#">불가리 알루미늄</a></li>
+                                        </div> <!-- .select end -->
+                                    </div>
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">핸드백 & 액세서리</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>HAND BAG</h3>
+                                    <div class="bag_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <div class="woman">
+                                                <h4>woman</h4>
+                                                <li><a href="#">핸드백</a></li>
+                                                <li><a href="#">지갑</a></li>
+                                                <li><a href="#">레더 브레이슬릿</a></li>
+                                                <li><a href="#">아이웨어</a></li>
+                                            </div> <!-- .woman end -->
+                                            <div class="man">
+                                                <h4>man</h4>
+                                                <li><a href="#">백</a></li>
+                                                <li><a href="#">지갑</a></li>
+                                                <li><a href="#">소형 가죽제품</a></li>
+                                                <li><a href="#">레더 브레이슬릿</a></li>
+                                            </div> <!-- .man end -->
+                                            <li><a href="#">전체보기</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="list">
+                                                <div class="top">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu15.png" alt="메뉴15" /></a>
+                                                        </figure>
+                                                        <p><a href="#">세르펜티</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu16.png" alt="메뉴16" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 로고</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .top end -->
+                                                <div class="bottom">
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu17.png" alt="메뉴17" /></a>
+                                                        </figure>
+                                                        <p><a href="#">비제로원</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu18.png" alt="메뉴18" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 불가리</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .bottom end -->
+                                            </div> <!-- .list end -->
+                                        </div> <!-- .collet -->
+                                        <div class="select">
+                                            <h4>Bvlgari Selection</h4>
+                                            <li><a href="#">세르펜티 바이아</a></li>
+                                            <li><a href="#">신제품</a></li>
+                                            <li><a href="#">체인 백</a></li>
+                                            <li><a href="#">프레셔스 스킨 백</a></li>
+                                            <li><a href="#">퍼스널라이즈</a></li>
+                                        </div> <!-- .select end -->
+                                    </div>
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">향수</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>PURFUME</h3>
+                                    <div class="pup_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <li><a href="#">오 드 뚜왈렛</a></li>
+                                            <li><a href="#">오 드 코롱</a></li>
+                                            <li><a href="#">오 드 퍼퓸</a></li>
+                                            <li><a href="#">전체보기</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="item_list">
+                                                <div class="woman">
+                                                    <h4>woman</h4>
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu19.png" alt="메뉴19" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 알레그라</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu20.png" alt="메뉴20" /></a>
+                                                        </figure>
+                                                        <p><a href="#">불가리 리젬메</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .woman end -->
+                                                <div class="man">
+                                                    <h4>man</h4>
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu21.png" alt="메뉴21" /></a>
+                                                        </figure>
+                                                        <p><a href="#">맨</a></p>
+                                                    </div> <!-- .item end / 1-->
+                                                    <div class="item">
+                                                        <figure>
+                                                            <a href="#"><img src="img/menu22.png" alt="메뉴22" /></a>
+                                                        </figure>
+                                                        <p><a href="#">뿌르 옴므</a></p>
+                                                    </div> <!-- .item end / 2-->
+                                                </div> <!-- .man end -->
+                                            </div> <!-- .item_list end -->
+                                        </div>
+                                    </div> <!-- .collet end -->
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">기프트</a>
+                            <ul class="depth02">
+                                <div class="inner">
+                                    <h3>GIFT</h3>
+                                    <div class="gift_list">
+                                        <div class="categ">
+                                            <h4>Category</h4>
+                                            <li><a href="#">주얼리</a></li>
+                                            <li><a href="#">워치</a></li>
+                                            <li><a href="#">핸드백</a></li>
+                                            <li><a href="#">액세서리</a></li>
+                                        </div> <!-- .categ end -->
+                                        <div class="collet">
+                                            <div class="title_plus">
+                                                <h4>Collection</h4>
+                                                <li><a href="#">+전체보기</a></li>
+                                            </div>
+                                            <div class="woman">
+                                                <h4>For woman</h4>
+                                                <div>
+                                                    <li><a href="#">그녀를 위해</a></li>
+                                                    <li><a href="#">어머니를 위해</a></li>
+                                                    <li><a href="#">친구를 위해</a></li>
+                                                    <li><a href="#">스몰 럭셔리 기프트</a></li>
+                                                </div>
+                                            </div> <!-- .woman end -->
+                                            <div class="man">
+                                                <h4>For man</h4>
+                                                <div>
+                                                    <li><a href="#">그를 위해</a></li>
+                                                    <li><a href="#">아버지를 위해</a></li>
+                                                    <li><a href="#">친구를 위해</a></li>
+                                                </div>
+                                            </div> <!-- .man end -->
+                                        </div> <!-- .collet end -->
+                                        <div class="select">
+                                            <h4>Bvlgari Selection</h4>
+                                            <li><a href="#">무료배송</a></li>
+                                            <li><a href="#">무료반품</a></li>
+                                            <li><a href="#">인그레이빙</a></li>
+                                            <li><a href="#">
+                                                    온라인 익스클루시브<br />
+                                                    불가리 기프트 박스
+                                                </a></li>
+                                        </div> <!-- .select end -->
+                                    </div> <!-- .gist_list end -->
+                                </div> <!-- .inner end -->
+                            </ul> <!-- .depth02 end -->
+                        </li> <!-- .depth01 end -->
+                        <li class="depth01">
+                            <a href="#">호텔 & 리조트</a>
+                        </li> <!-- .depth01 end -->
+                    </ul>
+                </nav>
+            </div> <!-- .pc end -->
+            <div class="mobile">
+                <div class="inner">
+                    <div class="top">
+                        <h1>
+                            <img src="img/bvlgari.png" alt="로고" />
+                        </h1>
+                        <figure>
+                            <img src="img/close.png" alt="닫기" />
+                        </figure>
+                    </div> <!-- .top end -->
+                    <nav>
+                        <ul>
+                            <li class="depth01">
+                                <a href="#" class="depth01_text">브랜드</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <div>
+                                            <p><a href="#">불가리 역사</a></p>
+                                            <p><a href="#">불가리 아이덴티티</a></p>
+                                            <p><a href="#">불가리 혁신</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">사회 공헌 활동</a></p>
+                                            <p><a href="#">작품 & 전시회</a></p>
+                                            <p><a href="#">인재 채용</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">주얼리</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">링</a></p>
+                                            <p><a href="#">이어링</a></p>
+                                            <p><a href="#">네크리스</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">브레이슬릿</a></p>
+                                            <p><a href="#">기타</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">인게이지먼트 & 웨딩</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">인게이지먼트 링</a></p>
+                                            <p><a href="#">여성용 웨딩밴드</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">남성용 웨딩밴드</a></p>
+                                            <p><a href="#">커플링</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="collect_inner">
+                                        <div>
+                                            <p><a href="#">로마 아모르</a></p>
+                                            <p><a href="#">인콘트로 다모레</a></p>
+                                            <p><a href="#">인피니토</a></p>
+                                            <p><a href="#">베네치아</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">메리미</a></p>
+                                            <p><a href="#">페디</a></p>
+                                            <p><a href="#">그레페</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">워치</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">여성용</a></p>
+                                            <p><a href="#">남성용</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="collect_inner">
+                                        <div>
+                                            <p><a href="#">여성용</a></p>
+                                            <p><a href="#">남성용</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">핸드백 & 액세서리</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">여성용</a></p>
+                                            <p><a href="#">남성용</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="collect_inner">
+                                        <div>
+                                            <p><a href="#">세르펜티</a></p>
+                                            <p><a href="#">불가리 로고</a></p>
+                                            <p><a href="#">비제로원</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">불가리 불가리</a></p>
+                                            <p><a href="#">불가리 불가리 맨</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">향수</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">오 드 뚜왈렛</a></p>
+                                            <p><a href="#">오 드 코롱</a></p>
+                                            <p><a href="#">오 드 퍼퓸</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="collect_inner">
+                                        <div>
+                                            <p><a href="#">여성용</a></p>
+                                            <p><a href="#">남성용</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">기프트</a>
+                                <div class="depth02">
+                                    <div class="categ">
+                                        <p><a href="#">Category</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="categ_inner">
+                                        <div>
+                                            <p><a href="#">주얼리</a></p>
+                                            <p><a href="#">워치</a></p>
+                                        </div>
+                                        <div>
+                                            <p><a href="#">핸드백</a></p>
+                                            <p><a href="#">액세서리</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="collect">
+                                        <p><a href="#">Collection</a></p>
+                                        <p><a href="#">+전체보기</a></p>
+                                    </div>
+                                    <div class="collect_inner">
+                                        <div>
+                                            <p><a href="#">여성용</a></p>
+                                            <p><a href="#">남성용</a></p>
+                                        </div>
+                                    </div>
+                                </div> <!-- .depth02 end -->
+                            </li> <!-- .depth01 end -->
+                            <li class="depth01">
+                                <a href="#">호텔 & 리조트</a>
+                            </li> <!-- .depth01 end -->
+                        </ul>
+                    </nav>
+                </div> <!-- .inner end -->
+            </div> <!-- .mobile end -->
+
+        </section> <!-- .menu -->
+    </header>
+
+    <section class="main_visual">
+        <div class="inner">
+            <figure>
+                <img src="img/main_visual02.png" alt="메인비주얼" />
+            </figure>
+            <div class="text">
+                <h2>경이로운 사랑</h2>
+                <a href="#">
+                    <p>어머니를 위한 기프트</p>
+                </a>
+                <a href="#">
+                    <p>아버지를 위한 기프트</p>
+                </a>
+            </div>
+        </div>
+    </section> <!-- .main_visual -->
+
+    <section class="cont01">
+        <div class="inner">
+            <h3>ABOUT US</h3>
+            <P>“ARTISTIC”</P>
+            <P>“INNOVATION”</P>
+            <P>“CHARISMA”</P>
+            <P>“HERITAGE”</P>
+            <a href="#"><span>VIEW MORE</span></a>
+        </div> <!-- .inner end -->
+    </section> <!-- .cont01 end -->
+
+    <section class="cont02">
+        <div class="inner">
+            <p>"Prepare a special gift for a special person"</p>
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <a href="#"><img src="img/gift01.png" alt="반지" /></a>
+                    </figure>
+                    <a href="#">
+                        <p>Ring</p>
+                    </a>
+                </div> <!-- .item end / 1-->
+                <div class="item">
+                    <a href="#">
+                        <p>Necklace</p>
+                    </a>
+                    <figure>
+                        <a href="#"><img src="img/gift02.png" alt="목걸이" /></a>
+                    </figure>
+                </div> <!-- .item end / 2-->
+                <div class="item">
+                    <figure>
+                        <a href="#"><img src="img/gift03.png" alt="시계" /></a>
+                    </figure>
+                    <a href="#">
+                        <p>Watch</p>
+                    </a>
+                </div> <!-- .item end / 3-->
+                <div class="item">
+                    <a href="#">
+                        <p>Hand Bag</p>
+                    </a>
+                    <figure>
+                        <a href="#"><img src="img/gift04.png" alt="핸드백" /></a>
+                    </figure>
+                </div> <!-- .item end / 4-->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .cont02 end -->
+
+    <section class="event">
+        <div class="inner">
+            <figure>
+                <img src="img/event02.png" alt="이벤트" />
+            </figure>
+            <div>
+                <h4>특별한 어버이날 기프트</h4>
+                <p>Express your feeling</p>
+                <a href="#"><span>자세히보기</span></a>
+            </div>
+        </div> <!-- .inner end -->
+    </section> <!-- .event end -->
+
+    <div class="cont03">
+        <h3>Reference Product</h3>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product01.png" alt="상품1" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product02.png" alt="상품2" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product03.png" alt="상품3" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product04.png" alt="상품4" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product05.png" alt="상품5" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product06.png" alt="상품6" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product07.png" alt="상품7" /></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/product08.png" alt="상품8" /></a>
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-scrollbar"></div>
+        <div thumbsSlider="" class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/product01.png" alt="상품1" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product02.png" alt="상품2" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product03.png" alt="상품3" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product04.png" alt="상품4" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product05.png" alt="상품5" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product06.png" alt="상품6" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product07.png" alt="상품7" />
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/product08.png" alt="상품8" />
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+                <div class="swiper-slide">
+
+                </div>
+            </div>
+        </div>
+    </div> <!-- .cont03 end-->
+
+    <section class="cont04">
+        <div class="inner">
+            <h3>Bridal Story</h3>
+            <div class="list">
+                <div class="item">
+                    <figure>
+                        <a href="#"><img src="img/bridal01.jpg" alt="비제로원 컬렉션" /></a>
+                    </figure>
+                    <a href="#">
+                        <p>비제로원 컬렉션</p>
+                    </a>
+                </div> <!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <a href="#"><img src="img/bridal02.jpg" alt="인게이지먼트 & 웨딩 링" /></a>
+                    </figure>
+                    <a href="#">
+                        <p>인게이지먼트 & 웨딩 링</p>
+                    </a>
+                </div> <!-- .item end -->
+                <div class="item">
+                    <figure>
+                        <a href="#"><img src="img/bridal03.jpg" alt="로마 아모르 컬렉션" /></a>
+                    </figure>
+                    <a href="#">
+                        <p>로마 아모르 컬렉션</p>
+                    </a>
+                </div> <!-- .item end -->
+            </div> <!-- .list end -->
+            <a href="#"><span>자세히 보기</span></a>
+        </div> <!-- .inner end -->
+    </section> <!-- .cont04 end -->
+
+    <section class="cont05">
+        <div class="inner">
+            <h3>Bvlgari Service</h3>
+            <div class="list">
+                <div class="item">
+                    <a href="#">
+                        <p>무료배송 & 무료반품</p>
+                    </a>
+                </div> <!-- .item end -->
+                <div class="item">
+                    <a href="#">
+                        <p>인그레이빙</p>
+                    </a>
+                </div> <!-- .item end -->
+                <div class="item">
+                    <a href="#">
+                        <p>온라인 익스클루시브<br />
+                            불가리 기프트 박스</p>
+                    </a>
+                </div> <!-- .item end -->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </section> <!-- .cont05 end -->
+
+    <footer>
+        <div class="inner">
+            <div class="list">
+                <div class="item">
+                    <div>
+                        <h4>고객관리</h4>
+                        <p><a href="#">스토어 방문 예약 서비스</a></p>
+                        <p><a href="#">주문 정보</a></p>
+                        <p><a href="#">교환 및 반품 신청</a></p>
+                        <p><a href="#">자주 묻는 질문(FAQ)</a></p>
+                        <p><a href="#">배송 조회</a></p>
+                        <p><a href="#">고객 서비스</a></p>
+                    </div>
+                    <div>
+                        <h4>스토어 검색</h4>
+                        <p><a href="#">스토어 위치</a></p>
+                    </div>
+                </div> <!-- .item end / 1-->
+                <div class="item">
+                    <h4><a href="#">문의하기</a></h4>
+                    <p><a href="#">전화문의</a></p>
+                    <p><a href="#">이메일 보내기</a></p>
+                    <p><a href="#">채팅 문의 카카오톡 상담하기</a></p>
+                    <p><a href="#">스토어 방문 예약하기</a></p>
+                </div> <!-- .item end / 2 -->
+                <div class="item">
+                    <h4>불가리 소개</h4>
+                    <p><a href="#">사회 공헌 활동</a></p>
+                    <p><a href="#">인재채용</a></p>
+                    <p><a href="#">브랜드 보호</a></p>
+                    <p><a href="#">호텔 & 리조트</a></p>
+                    <p><a href="#">역사</a></p>
+                    <p><a href="#">불가리 컬렉션</a></p>
+                </div> <!-- .item end / 3 -->
+                <div class="item">
+                    <div>
+                        <h4>개인정보 보호 및 쿠키 정책</h4>
+                        <p><a href="#">쿠기 설정</a></p>
+                        <p><a href="#">쿠키 정책</a></p>
+                        <p><a href="#">개인정보 처리방침</a></p>
+                        <p><a href="#">지원자 개인정보 보호정책</a></p>
+                        <p><a href="#">데이터 보호 인증 (BS10012)</a></p>
+                    </div>
+                    <div>
+                        <h4>법적 고지</h4>
+                        <p><a href="#">판매약관</a></p>
+                        <p><a href="#">이용약관</a></p>
+                    </div>
+                    <p>배송지 : 한국 <span></span> 한국어</p>
+                </div> <!-- .item end / 4-->
+            </div> <!-- .list end -->
+        </div> <!-- .inner end -->
+    </footer>
+</body>
+
+</html>
